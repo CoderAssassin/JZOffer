@@ -95,9 +95,6 @@ public class T_17 {
         root2=root2.left;
         root2.left=new TreeNode(2);
 
-
         System.out.println(t.HasSubtree(real_root1,real_root2));
-
-
     }
 }
