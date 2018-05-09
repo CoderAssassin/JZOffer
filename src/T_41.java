@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @date 18-5-9 下午8:07
  * 和为S的连续整数序列：我的解法
  * 思路：从2开始遍历子序列的长度，若长度为奇数，那么sum/2为中间子序列的中间数，而且必须是整数，往左取一个则必定往右取一个；
- * 如果长度为偶数，那么sum/2的小数部分×i==i/2
+ * 如果长度为偶数，那么sum/2的小数部分×i==i/2。根据等差数列，长度最长为Math.sqrt(2*sum)
  */
 public class T_41 {
 
@@ -16,7 +16,8 @@ public class T_41 {
         ArrayList<ArrayList<Integer>> res=new ArrayList<>();
         ArrayList<ArrayList<Integer>> reverseRes=new ArrayList<>();
 
-        for (int i=2;i<=sum;i++){
+//        for (int i=2;i<=sum;i++){
+        for (int i=2;i<=Math.sqrt(2*sum);i++){
 
             if (i%2==0){//i是奇数，那么小数位需要是5
                 if (sum/i-(i/2-1)<=0)
