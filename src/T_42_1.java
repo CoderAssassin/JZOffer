@@ -27,6 +27,6 @@ public class T_42_1 {
             while (i<j&&array[i]+array[j]>sum) --j;
             while (i<j&&array[i]+array[j]<sum) ++i;
         }
-        return res;     
+        return res;
     }
 }
