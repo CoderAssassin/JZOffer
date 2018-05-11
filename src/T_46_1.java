@@ -23,4 +23,18 @@
  * f(n,m)=(f(n-1,m)+m)%n; （n>1）
  */
 public class T_46_1 {
+    /*
+     * 编号为(0~n-1)
+     */
+    public int getResult(int n, int m) {
+        if (n < 0 || m < 0) {
+            return -1;
+        }
+        int last = 0;
+        for(int i=2;i<=n;++i){
+            last = (last+m)%i;
+        }
+        // 因为实际编号为(1~n)
+        return (last+1);
+    }
 }
