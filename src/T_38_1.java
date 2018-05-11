@@ -20,5 +20,7 @@ public class T_38_1 {
 
     public int TreeDepth(TreeNode root) {
 
+        if (root==null) return 0;
+        return Math.max(TreeDepth(root.left)+1,TreeDepth(root.right)+1);
     }
 }
