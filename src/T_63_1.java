@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -9,7 +10,12 @@ import java.util.PriorityQueue;
  */
 public class T_63_1 {
 
-    PriorityQueue<Integer> p=new PriorityQueue<>();//大顶堆
+    PriorityQueue<Integer> p=new PriorityQueue<>(new Comparator<Integer>() {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return o2-o1;
+        }
+    });//大顶堆
     PriorityQueue<Integer> q=new PriorityQueue<>();//小顶堆
     public void Insert(Integer num) {
         if (p.isEmpty()==true||num<=p.peek())
